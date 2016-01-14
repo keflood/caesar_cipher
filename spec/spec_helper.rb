@@ -1,10 +1,10 @@
-RSpec.configure do |config|
-  #use color in STDOUT
-  config.color_enabled = true
+require 'caesar_cipher'
 
-  #Use color not only in STDOUT but also in pagers and files
-  config.tty = true
 
-  #Use the specified formatter
-  config.formatter = :documentation # :progress, :html, :textmate
-end
+root = File.expand_path(File.dirname(__FILE__) + '/../')
+
+lib = root + '/lib'
+spec = root + '/spec'
+
+$:.unshift(lib) unless $:.include?(lib)
+$:.unshift(spec) unless $:.include?(spec)
