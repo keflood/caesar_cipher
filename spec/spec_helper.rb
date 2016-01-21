@@ -1,5 +1,3 @@
-require 'caesar_cipher'
-
 
 root = File.expand_path(File.dirname(__FILE__) + '/../')
 
