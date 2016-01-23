@@ -36,6 +36,9 @@ describe CaesarCipher do
     expect(caesar_cipher.encrypt("z", 2)).to eq "b"
   end
 
+  it "encrypts 'A' with a shift of 1" do
+    expect(caesar_cipher.encrypt("A", 1)).to eq "B"
+  end
 
 
 end

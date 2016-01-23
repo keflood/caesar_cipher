@@ -15,7 +15,7 @@ class CaesarCipher
   def encrypt_char(char, shift)
     ascii_code = char.ord
     shifted_ascii_code = ascii_code + shift
-      if (97..122).include?(ascii_code)
+      if (65..90, 97..122).include?(ascii_code)
       if shifted_ascii_code > 122
           remainder = shifted_ascii_code % 122
           shifted_ascii_code = 96 + remainder
@@ -23,5 +23,6 @@ class CaesarCipher
         shifted_ascii_code.chr
       end
   end
+
 
 end
